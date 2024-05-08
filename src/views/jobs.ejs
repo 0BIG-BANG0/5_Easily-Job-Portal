@@ -1,0 +1,19 @@
+<h1 id="heading"><lord-icon
+    src="https://cdn.lordicon.com/ibanawal.json"
+    trigger="hover"
+    style="width:60px;height:60px">
+</lord-icon> Jobs</h1>
+
+<div class="card-space">
+    <% jobs.forEach(job=>{ %>
+    <div class="card">
+        <h2><%= job.name %></h2>
+        <p><%= job.role %></p>
+        <p><%= job.location %></p>
+        <p><%= job.ctc %></p>
+        <p class="skills" title="<%= job.skills.join(', ') %>"><%= job.skills.join('  ').substring(0, 40) %><%= job.skills.length > 40 ? '...' : '' %></p>
+        <a href="#" onclick="viewDetails()">View Details</a>
+    </div>
+<% }) %>
+    
+</div>
