@@ -9,6 +9,9 @@ const app = express()
 //for static file like css 
 app.use(express.static('public'))
 
+//BodyParser
+app.use(express.urlencoded({ extended: true }));
+
 
 //Setting up the view Engine (ejs in this case)
 app.set("view engine", 'ejs')

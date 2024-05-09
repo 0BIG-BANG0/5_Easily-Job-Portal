@@ -1,0 +1,43 @@
+<div class="view-details">
+  <div class="content">
+    <div class="card">
+      <img src="/images/web-banner-28759.png" alt="" />
+      <h1>
+        <%= job.role %> oppertunity in <%= job.location %> at <%= job.name %>
+      </h1>
+      <div>
+        <img
+          src="/images/we-are-hiring.png"
+          alt=""
+          style="height: 50px; width: 50px"
+        /><span
+          ><a href="/updateJob/<%= job.id %>"
+            ><lord-icon
+              src="https://cdn.lordicon.com/lsrcesku.json"
+              trigger="hover"
+              style="width: 50px; height: 50px"
+            >
+            </lord-icon></a
+        ></span>
+        <span><lord-icon
+            src="https://cdn.lordicon.com/xekbkxul.json"
+            trigger="click"
+            style="width:50px;height:50px; color:red">
+        </lord-icon></span>
+      </div>
+      <h3><%= job.name %></h3>
+      <h4><%= job.role %></h4>
+      <div class="info">
+        <p>Locaton : <%= job.location %></p>
+        <p>Salary : <%= job.ctc %></p>
+        <p>Apply By : <%= job.applyBy %></p>
+        <p>No of Openings : <%= job.numOfOpening %></p>
+        <p><a href="">Applicants </a></p>
+        <p class="skills">
+          <%= job.skills.join(' ') %><%= job.skills.length > 40 ? '...' : '' %>
+        </p>
+        <div><a href="">Apply Now</a></div>
+      </div>
+    </div>
+  </div>
+</div>
