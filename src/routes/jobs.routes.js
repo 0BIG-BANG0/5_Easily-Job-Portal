@@ -13,5 +13,7 @@ jobRouter.get("/addNewJob", jobController.getAddNewJob);
 jobRouter.post("/postNewJob", jobController.postAddNewJob);
 jobRouter.get("/updateJob/:id", jobController.getUpdateJob);
 jobRouter.post("/updateJob", jobController.postUpdateJob);
+jobRouter.get("/deleteJob/:id", jobController.getdeleteJobView);
+
 
 export default jobRouter;

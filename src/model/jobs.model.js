@@ -61,7 +61,7 @@ export default class JobModel {
     numOfOpening,
     applyBy
   ) {
-    console.log(id,category,role,name)
+    console.log(id, category, role, name);
     const index = jobs.findIndex((j) => j.id == id);
     if (index !== -1) {
       jobs[index].category = category;
@@ -76,6 +76,10 @@ export default class JobModel {
     } else {
       return false; // Return false if job is not found
     }
+  }
+  static deleteById(id) {
+    const index = jobs.findIndex((j) => j.id == id);
+    return jobs.splice(index, 1);
   }
 }
 

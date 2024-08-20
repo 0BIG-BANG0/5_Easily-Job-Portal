@@ -19,11 +19,11 @@
             >
             </lord-icon></a
         ></span>
-        <span><lord-icon
+        <span><a href="/deleteJob/<%= job.id %>"><lord-icon
             src="https://cdn.lordicon.com/xekbkxul.json"
             trigger="click"
             style="width:50px;height:50px; color:red">
-        </lord-icon></span>
+        </lord-icon></a></span>
       </div>
       <h3><%= job.name %></h3>
       <h4><%= job.role %></h4>
@@ -32,11 +32,11 @@
         <p>Salary : <%= job.ctc %></p>
         <p>Apply By : <%= job.applyBy %></p>
         <p>No of Openings : <%= job.numOfOpening %></p>
-        <p><a href="">Applicants </a></p>
+        <p><a href="/getApplicants">Applicants </a></p>
         <p class="skills">
           <%= job.skills.join(' ') %><%= job.skills.length > 40 ? '...' : '' %>
         </p>
-        <div><a href="">Apply Now</a></div>
+        <div><a href="/apply">Apply Now</a></div>
       </div>
     </div>
   </div>

@@ -67,7 +67,7 @@ export default class JobController {
       name,
       location,
       ctc,
-      skills,// Ensure skills is an array
+      skills, // Ensure skills is an array
       numOfOpening,
       applyBy,
     } = req.body;
@@ -82,12 +82,20 @@ export default class JobController {
       numOfOpening,
       applyBy
     );
-    console.log(update);
+    // console.log(update);
 
-    JobModel.get()
+    JobModel.get();
     if (!update) {
       return res.status(404).send("Job not found");
     }
     res.redirect("/view-details/" + id); // Redirect to view details page with updated job ID
   }
+  getdeleteJobView(req, res) {
+    const id = req.params.id;
+    console.log(id);
+    JobModel.deleteById(id);
+    const jobs = JobModel.get();
+    res.redirect("/");
+  }
+  
 }
